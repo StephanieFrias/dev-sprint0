@@ -12,8 +12,9 @@ Explain what each of the following lines does. Use the terminology you learned f
 	wait_for_user()
 
 Answer:
-
-
+Line 1 imports the TurtleWorld module, assuming you previously downloaded the Swampy modules but didn't install them as a package
+Line 2 creates and assigns a TurtleWorld to world
+Line 3 creates and assigns a Turtle to bob
 
 
 
@@ -22,12 +23,19 @@ These questions pertain to the program you wrote in Week0.
 
 -- What are the arguments of polygon()?  What type is each argument?
 Answer:
+t: turtle, a variable
+l: length , an integer
+n: number of sides, an integer
 
 -- What two turtle functions did you use to draw the sides of the polygon?
-Answer:
+Answer: angle and polyline
 
 -- What are the arguments for polyline?  What type is each argument?
-Answer:
+Answer: 
+t: turtle, a variable
+l: length, an integer
+n: number of sides, an integer
+angle: in degrees, an integer
 
 
 
@@ -36,10 +44,10 @@ Answer:
 Suppose you wrote a function, center_circle(), that draws a circle of a given radius around the current location of the turtle and restores the turtle to its starting point.
 
 -- What turtle functions would you use to move the turtle from the center to the edge of the circle and get ready to call the original circle() function?
-Answer:
+Answer: pu(turtle) to lift the turtle's pen, lt(turtle) twice to change the direction of the turtle 180 degrees, fd(turtle) to move turtle forward a distance equal half the radius. I would then use lt(turtle) to change the direction of the turtle again, fd(turtle) to move the turtle forward a distance equal to half the radius, and lt(turtle) to have the turtle turn left once more. Finally, I would then use pd(turtle) to put the turtle's pen back down. Now it's ready to run the circle() function, with radius r.
 
 -- Suppose the interface of this function requires the turtle to end up in the same place it started, facing in the same direction it started.
-Answer:
+Answer: The steps are very similar to the above: , I would use a loop so the turtle does the following again: pu(turtle) to lift the turtle's pen, lt(turtle) to turn the turtle left, fd(turtle) to move turtle forward a distance equal half the radius. I would then use rt(turtle) to change the direction of the turtle again, fd(turtle) to move the turtle forward a distance equal to half the radius.
 
 -- What is this type of requirement called?
-Answer:
+Answer: A loop
