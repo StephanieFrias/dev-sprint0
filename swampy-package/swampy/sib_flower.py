@@ -14,19 +14,17 @@ bob = Turtle()
 bob.delay = 0.01
 
 def polyline(t,n,length,angle):
-	"""With a turtle object, t, draw n lines of length l, and turn angle a degrees before drawing next line"""
+	"""With a turtle object, t, draw n lines of a certain length, and turn angle (in degrees) before drawing next line"""
 	for i in range(n):
 		fd(t,length)
 		lt(t,angle)
 
 import math
-print math
 
 def arc(t,r,angle):
 	"""Draw an arc with radius r with subtended angle"""
 	arc_length= math.pi * 2 * r* abs(angle) / 360
 	n= int(arc_length/4)+1
-	angle=360.0/n
 	step_length=arc_length/n
 	step_angle=float(angle)/n
 	polyline(t,n,step_length,step_angle)
